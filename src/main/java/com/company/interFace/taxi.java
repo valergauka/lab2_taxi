@@ -1,7 +1,7 @@
 package com.company.interFace;
 
 //import com.company.taxi;
-import com.company.taxi.Taxi;
+import com.company.taxi.TaxiServis;
 
 import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
@@ -11,6 +11,6 @@ import java.io.IOException;
 
 
 public interface taxi {
-    void serialize(Taxi taxi, String path) throws JAXBException, IOException;
-    Taxi deserialize(String path) throws JAXBException, FileNotFoundException;
+    void serialize(TaxiServis taxi, String path) throws JAXBException, IOException;
+    TaxiServis deserialize(String path) throws JAXBException, FileNotFoundException;
 }

@@ -1,12 +1,10 @@
 package com.company;
 
 import com.company.interFace.JSON;
-import com.company.interFace.TXT;
-import com.company.interFace.XML;
 import com.company.taxi.Cars;
 import com.company.taxi.Drivers;
 import com.company.taxi.Routs;
-import com.company.taxi.Taxi;
+import com.company.taxi.TaxiServis;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
@@ -14,7 +12,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException, JAXBException {
-        Taxi taxi = new Taxi();
+        TaxiServis taxi = new TaxiServis();
         Cars cars = new Cars();
         cars.setModel("Mercedes");
         cars.setColor("Red");
@@ -24,7 +22,7 @@ public class Main {
         Drivers drivers = new Drivers();
         drivers.setName("Lera");
         drivers.setExperience(2);
-        drivers.setYear(20);
+        drivers.setStartWorkYear(2009);
 
         taxi.getRouts().add(
                 new Routs.RoutsBuilder()
@@ -37,14 +35,14 @@ public class Main {
 
         System.out.println(taxi.toString());
         try {
-            new JSON().serialize(taxi, "taxi.json");
-            new TXT().serialize(taxi, "taxi.txt");
-            new XML().serialize(taxi, "taxi.xml");
+            //new JSON().serialize(taxi, "taxi.json");
+            //new TXT().serialize(taxi, "taxi.txt");
+            //new XML().serialize(taxi, "taxi.xml");
 
-            Taxi TaxiFromJSON = new JSON().deserialize("taxi.json");
-            Taxi TAxiFromXML = new XML().deserialize("taxi.xml");
+            TaxiServis TaxiFromJSON = new JSON().deserialize("taxi.json");
+            //TaxiServis TAxiFromXML = new XML().deserialize("taxi.xml");
 
-            System.out.println("\nXML:\n" + TAxiFromXML);
+            //System.out.println("\nXML:\n" + TAxiFromXML);
             System.out.println("\nJSON:\n" + TaxiFromJSON);
         } catch (JAXBException | IOException  e) {
             e.printStackTrace();

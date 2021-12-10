@@ -2,12 +2,11 @@ package com.company.taxi;
 
 import java.util.Objects;
 
-public class Cars extends Routs {
+public class Cars {
     private String model;
     private String color;
     private int numberOfSeats;
     private String number;
-
     public Cars() {
     }
 

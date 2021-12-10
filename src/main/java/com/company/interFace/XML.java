@@ -1,6 +1,6 @@
 package com.company.interFace;
 
-import com.company.taxi.Taxi;
+import com.company.taxi.TaxiServis;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -11,18 +11,18 @@ import java.io.FileNotFoundException;
 
 public class XML implements taxi{
     @Override
-    public void serialize(Taxi taxi, String path) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Taxi.class);
+    public void serialize(TaxiServis taxi, String path) throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(TaxiServis.class);
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         jaxbMarshaller.marshal(taxi, new File(path));
     }
 
     @Override
-    public Taxi deserialize(String path) throws JAXBException, FileNotFoundException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Taxi.class);
+    public TaxiServis deserialize(String path) throws JAXBException, FileNotFoundException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(TaxiServis.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        Taxi taxi = (Taxi) jaxbUnmarshaller.unmarshal(new File(path));
+        TaxiServis taxi = (TaxiServis) jaxbUnmarshaller.unmarshal(new File(path));
         return taxi;
     }
 }

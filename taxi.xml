@@ -3,7 +3,6 @@
     <routs>
         <address>Chernivtsi</address>
         <car>
-            <sum_routs>0</sum_routs>
             <color>Red</color>
             <model>Mercedes</model>
             <number>CE4671BT</number>

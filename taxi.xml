@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxi>
+    <routs>
+        <address>Chernivtsi</address>
+        <car>
+            <sum_routs>0</sum_routs>
+            <color>Red</color>
+            <model>Mercedes</model>
+            <number>CE4671BT</number>
+            <numberOfSeats>4</numberOfSeats>
+        </car>
+        <driver>
+            <experience>2</experience>
+            <name>Lera</name>
+            <year>20</year>
+        </driver>
+        <sum_routs>4000</sum_routs>
+    </routs>
+</taxi>

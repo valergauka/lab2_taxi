@@ -1,0 +1,1 @@
+Taxi{routs=[Car{model=Mercedes,color=Red,numberOfSeats=4,number=CE4671BT} Driver{name=Lera,experience=2,year=20},address=Chernivtsi,sum_routs=4000}]}
